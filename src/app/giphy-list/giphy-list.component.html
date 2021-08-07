@@ -1,0 +1,23 @@
+<div style="display: flex; justify-content: space-between;">
+
+  <span>Trending Gifs</span>
+  <input type="text" placeholder="search for gifs" #gif (keyup.enter)="search(gif.value)">
+</div>
+<div class="container" id="gifs">
+    <div *ngFor="let giphie of giphies; index as i">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <a href="{{giphie.url}}" target="_blank" onmouseover="this.firstElementChild.style.display='block'">
+            <span class='play' onmouseout="this.style.display = 'none'">
+              UserName - {{giphie.userName}} <br>
+              Source - {{giphie.source}} <br>
+              Rating - {{giphie.rating}} <br>
+            </span>
+            <img src="{{giphie.images.preview_webp.url}}" alt="" width="100%">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button (click)="getMoreGIFs()" >Load More Gifs</button>
+  <button (click)="resetGIFs()" >Go Back</button>

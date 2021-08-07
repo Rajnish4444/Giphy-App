@@ -1,0 +1,27 @@
+#gifs{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  margin: 0 auto;
+}
+
+.container {
+  height: 70vh;
+  overflow: auto;
+  margin-bottom: 11px;
+}
+
+a {
+  min-height:104px;
+  min-width:184px;
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+}
+.play{
+  display:none;
+  color:#fff;
+  height:104px;
+  width:184px;
+  background-color:rgba(0,0,0,0.5);
+  position: absolute;
+}
